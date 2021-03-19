@@ -1,0 +1,610 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "x": 23,
+      "y": 64,
+      "perms": []
+    },
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "2224944a-561a-4fa1-824b-2f31ea37c836",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5053a44d-4a5e-460a-974d-da0cc07aac7c"
+          ]
+        }
+      ],
+      "x": 17,
+      "y": 218
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "<help",
+          "value": "Das menu",
+          "inline": "true"
+        },
+        {
+          "name": "<info",
+          "value": "Du siehst die Bot infos",
+          "inline": "true"
+        },
+        {
+          "name": "<botowner",
+          "value": "Der bot erstehlt die Bot Chef Rolle",
+          "inline": "true"
+        },
+        {
+          "name": "<adminhelp",
+          "value": "Das ist das admin help menu",
+          "inline": "true"
+        },
+        {
+          "name": "<setup",
+          "value": "(Server Admin) Richtet den Server ein",
+          "inline": "true"
+        },
+        {
+          "name": "<botstatus",
+          "value": "Endert denn Botstatus",
+          "inline": "true"
+        }
+      ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 228,
+      "y": 62,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "1FFF57",
+        "Help Menu",
+        "",
+        "Bot Name Here",
+        "",
+        "",
+        "This is the embed description, replace this with some info about your bot!",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "show info",
+      "guid": "5053a44d-4a5e-460a-974d-da0cc07aac7c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
+        }
+      ],
+      "x": 232,
+      "y": 215,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.DefaultChannel.id}",
+        "BOT Author: RoJason\n\nViel Spaß mit dem Bot",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "botowner",
+      "guid": "3835f293-9026-4835-87cf-bbcbd1495cdd",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "3828250a-3d5a-45fa-bc2e-f339b94f2478"
+          ]
+        }
+      ],
+      "x": 31,
+      "y": 356,
+      "perms": [
+        "bots"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "rolle",
+      "guid": "3828250a-3d5a-45fa-bc2e-f339b94f2478",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3835f293-9026-4835-87cf-bbcbd1495cdd"
+        }
+      ],
+      "x": 244,
+      "y": 371,
+      "rtype": "Server Action",
+      "rsubtype": "Add Role to Server",
+      "formdata": [
+        "Bot Admin",
+        "2655FF",
+        "",
+        "false",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "rolename",
+        "color",
+        "position",
+        "hoist",
+        "mentionable",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "setup",
+      "guid": "4bfb5fc4-cbd6-40e0-b542-d70363c63ef7",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "f2ed242a-6cc5-4638-b779-e9649464c780"
+          ]
+        }
+      ],
+      "x": 24,
+      "y": 562,
+      "perms": [
+        "bot admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Channel",
+      "guid": "f2ed242a-6cc5-4638-b779-e9649464c780",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "5e0fd541-0b3b-4d4d-a5d7-49b338916295"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4bfb5fc4-cbd6-40e0-b542-d70363c63ef7"
+        }
+      ],
+      "x": 218,
+      "y": 599,
+      "rtype": "Channel Action",
+      "rsubtype": "Create Channel",
+      "formdata": [
+        "Kicked",
+        "",
+        "Text",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "reason",
+        "channeltype",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Channel 2",
+      "guid": "5e0fd541-0b3b-4d4d-a5d7-49b338916295",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b6a6cbb5-80c8-4f64-a909-b75cbb6779df"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f2ed242a-6cc5-4638-b779-e9649464c780"
+        }
+      ],
+      "x": 445,
+      "y": 603,
+      "rtype": "Channel Action",
+      "rsubtype": "Create Channel",
+      "formdata": [
+        "banned",
+        "",
+        "Text",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "reason",
+        "channeltype",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wilkommen",
+      "guid": "b6a6cbb5-80c8-4f64-a909-b75cbb6779df",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "21cab0cc-7616-4dc3-8374-31b790d91238"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5e0fd541-0b3b-4d4d-a5d7-49b338916295"
+        }
+      ],
+      "x": 666,
+      "y": 607,
+      "rtype": "Channel Action",
+      "rsubtype": "Create Channel",
+      "formdata": [
+        "wilkommen",
+        "",
+        "Text",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "reason",
+        "channeltype",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Spieler",
+      "guid": "21cab0cc-7616-4dc3-8374-31b790d91238",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b6a6cbb5-80c8-4f64-a909-b75cbb6779df"
+        }
+      ],
+      "x": 894,
+      "y": 609,
+      "rtype": "Server Action",
+      "rsubtype": "Add Role to Server",
+      "formdata": [
+        "Spieler",
+        "D1D1D1",
+        "",
+        "false",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "rolename",
+        "color",
+        "position",
+        "hoist",
+        "mentionable",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "adminhelp",
+      "guid": "7e10d512-2fcb-42d2-9933-2cf10e881239",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "b2a74dba-e48c-4d6b-9713-9290c78435e6"
+          ]
+        }
+      ],
+      "x": 17,
+      "y": 466,
+      "perms": [
+        "bot admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "admin help menu",
+      "guid": "b2a74dba-e48c-4d6b-9713-9290c78435e6",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "<setup",
+          "value": "Der Bot bereitet deinen Server vor",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7e10d512-2fcb-42d2-9933-2cf10e881239"
+        }
+      ],
+      "x": 424,
+      "y": 456,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "<@${dbsVars.CommandAuthor.id}>",
+        "FF3D1F",
+        "Admin Meu",
+        "",
+        "",
+        "",
+        "",
+        "Das ist das Admin help menu",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "botstatus",
+      "guid": "42d05e0d-d70d-4844-9d71-976e0260d9a2",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "b96cefae-bae8-4ef7-a4fd-599850a57cf2"
+          ]
+        }
+      ],
+      "x": 4,
+      "y": 694,
+      "perms": [
+        "bot admin"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "broadcast",
+      "guid": "8b142b14-92c7-4c2b-8b7c-a0244e81d045",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "05b6741a-d3c6-4625-b826-346de66a780f"
+          ]
+        }
+      ],
+      "x": 454,
+      "y": 215
+    },
+    {
+      "type": "response",
+      "name": "Text1",
+      "guid": "05b6741a-d3c6-4625-b826-346de66a780f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "8b142b14-92c7-4c2b-8b7c-a0244e81d045"
+        }
+      ],
+      "x": 660,
+      "y": 198,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "wilkommen",
+        "Von <@${dbsVars.CommandAuthor.id}> an Server.\nDas ist ein Test",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Activ",
+      "guid": "b96cefae-bae8-4ef7-a4fd-599850a57cf2",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "454cc6a9-3b9c-4ab5-8254-3b34a477b9eb"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "42d05e0d-d70d-4844-9d71-976e0260d9a2"
+        }
+      ],
+      "x": 233,
+      "y": 728,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        " RoJason",
+        "PLAYING",
+        ""
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "test3",
+      "guid": "454cc6a9-3b9c-4ab5-8254-3b34a477b9eb",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b96cefae-bae8-4ef7-a4fd-599850a57cf2"
+        }
+      ],
+      "x": 451,
+      "y": 764,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "<#${dbsVars.CommandChannel.id}>",
+        "Der Bot hat eine neue aktivität",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "command": [
+    {
+      "name": "User Joins Server",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Join",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "wilkommen",
+          "messagetext": "Wilkommen neuer Spieler!!! ( <@${tempVars.newuser.id}> )",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "Spieler",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "<@${tempVars.newuser.id}>",
+          "rolename": "Spieler"
+        }
+      ],
+      "var": {
+        "user": "newuser"
+      }
+    },
+    {
+      "name": "Any Message",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "msguser"
+      }
+    },
+    {
+      "name": "User Kicked",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Bann massage",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "kicked",
+          "messagetext": "Der Spieler <@${tempVars.kickuser.id}> wurde vom Server gekickt",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
+      "var": {
+        "user": "kickuser"
+      }
+    },
+    {
+      "name": "User Banned",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Ban massage",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "banned",
+          "messagetext": "Der Spieler <@${tempVars.banuser.id}> wurde gebannt von diesem Discord Server.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
+      "var": {
+        "user": "banuser"
+      }
+    },
+    {
+      "name": "Bot Initialization",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    }
+  ]
+}

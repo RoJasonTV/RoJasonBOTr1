@@ -1,0 +1,218 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "perms": [],
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "<help",
+              "value": "Das menu",
+              "inline": "true"
+            },
+            {
+              "name": "<info",
+              "value": "Du siehst die Bot infos",
+              "inline": "true"
+            },
+            {
+              "name": "<botowner",
+              "value": "Der bot erstehlt die Bot Chef Rolle",
+              "inline": "true"
+            },
+            {
+              "name": "<adminhelp",
+              "value": "Das ist das admin help menu",
+              "inline": "true"
+            },
+            {
+              "name": "<setup",
+              "value": "(Server Admin) Richtet den Server ein",
+              "inline": "true"
+            },
+            {
+              "name": "<botstatus",
+              "value": "Endert denn Botstatus",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FFF57",
+          "title": "Help Menu",
+          "url": "",
+          "authorname": "Bot Name Here",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "This is the embed description, replace this with some info about your bot!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "show info",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.DefaultChannel.id}",
+          "messagetext": "BOT Author: RoJason\n\nViel Spaß mit dem Bot",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "botowner",
+      "perms": [
+        "bots"
+      ],
+      "actions": [
+        {
+          "name": "rolle",
+          "category": "Server Action",
+          "type": "Add Role to Server",
+          "rolename": "Bot Admin",
+          "color": "2655FF",
+          "position": "",
+          "hoist": "false",
+          "mentionable": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "setup",
+      "perms": [
+        "bot admin"
+      ],
+      "actions": [
+        {
+          "name": "Channel",
+          "category": "Channel Action",
+          "type": "Create Channel",
+          "channelname": "Kicked",
+          "reason": "",
+          "channeltype": "Text",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "Channel 2",
+          "category": "Channel Action",
+          "type": "Create Channel",
+          "channelname": "banned",
+          "reason": "",
+          "channeltype": "Text",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "wilkommen",
+          "category": "Channel Action",
+          "type": "Create Channel",
+          "channelname": "wilkommen",
+          "reason": "",
+          "channeltype": "Text",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "Spieler",
+          "category": "Server Action",
+          "type": "Add Role to Server",
+          "rolename": "Spieler",
+          "color": "D1D1D1",
+          "position": "",
+          "hoist": "false",
+          "mentionable": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "adminhelp",
+      "perms": [
+        "bot admin"
+      ],
+      "actions": [
+        {
+          "name": "admin help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "<setup",
+              "value": "Der Bot bereitet deinen Server vor",
+              "inline": "true"
+            }
+          ],
+          "channelname": "<@${dbsVars.CommandAuthor.id}>",
+          "color": "FF3D1F",
+          "title": "Admin Meu",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Das ist das Admin help menu",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "botstatus",
+      "perms": [
+        "bot admin"
+      ],
+      "actions": [
+        {
+          "name": "Activ",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": " RoJason",
+          "activitytype": "PLAYING",
+          "streamurl": ""
+        },
+        {
+          "name": "test3",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "<#${dbsVars.CommandChannel.id}>",
+          "messagetext": "Der Bot hat eine neue aktivität",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "broadcast",
+      "actions": [
+        {
+          "name": "Text1",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "wilkommen",
+          "messagetext": "Von <@${dbsVars.CommandAuthor.id}> an Server.\nDas ist ein Test",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
